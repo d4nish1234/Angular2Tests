@@ -1,0 +1,22 @@
+<p>
+  dynamic-form-test works!
+</p>
+
+      <form [formGroup]="profileForm" *ngIf="profileForm">
+          
+        <label>name</label>
+        <input formControlName="name" />
+
+        <label>preference</label>
+        <input formControlName="preference" />
+
+        <div formGroupName="dynamic">
+        <label>dynamic a</label>
+        <input formControlName="appa" />
+
+        <label>dynamic b</label>
+        <input formControlName="appb" />
+      </div>
+        <button (click)="updateFields()">UPDATE</button>
+      </form>
+
