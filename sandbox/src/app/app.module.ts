@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DynamicFormTestComponent } from './dynamic-form-test/dynamic-form-test.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HtmlSourceReaderComponent } from './html-source-reader/html-source-reader.component';
+import { MovieSiteReaderComponent } from './movie-site-reader/movie-site-reader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicFormTestComponent,
     AppComponent,
+    HtmlSourceReaderComponent,
+    MovieSiteReaderComponent,
   ],
   imports: [
     BrowserModule,

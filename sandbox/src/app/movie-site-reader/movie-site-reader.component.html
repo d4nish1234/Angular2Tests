@@ -1,0 +1,13 @@
+<p>
+  movie-site-reader works!
+</p>
+
+      <form [formGroup]="movieFromURLForm" *ngIf="movieFromURLForm">
+          
+        <label>URL</label>
+        <input formControlName="URL" />
+
+        <button (click)="findMovie()">Find</button>
+      </form>
+
+
