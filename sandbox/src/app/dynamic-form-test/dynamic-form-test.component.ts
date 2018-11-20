@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-dynamic-form-test',
   templateUrl: './dynamic-form-test.component.html',
-  styleUrls: ['./dynamic-form-test.component.css']
+  styleUrls: ['./dynamic-form-test.component.scss']
 })
 export class DynamicFormTestComponent implements OnInit {
   profileForm = this.formBuilder.group({
@@ -20,7 +21,8 @@ export class DynamicFormTestComponent implements OnInit {
  
   public form
   
-  constructor(public formBuilder: FormBuilder,) {
+  constructor(public formBuilder: FormBuilder,
+    private modalService: BsModalService) {
   }
   
   ngOnInit() {
@@ -32,6 +34,12 @@ export class DynamicFormTestComponent implements OnInit {
     //console.log(this.model);
     console.log('form: ');
     console.log(this.profileForm);
+  }
+  
+  public modalRef: BsModalRef; // {1}
+
+  public openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template); // {3}
   }
   
   private setupForm2(){

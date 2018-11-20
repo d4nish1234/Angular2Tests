@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DynamicFormTestComponent } from './dynamic-form-test/dynamic-form-test.component';
-import { MovieSiteReaderComponent } from './movie-site-reader/movie-site-reader.component';
 
 const routes: Routes = [
     {
@@ -17,15 +16,6 @@ const routes: Routes = [
     {
       path:'dynamicFormTest',
       component:DynamicFormTestComponent,
-    },
-    {
-      path:'movie',
-      children:[
-        {
-          path: 'search',
-          component: MovieSiteReaderComponent
-        }
-      ]
     }
   ];
 
